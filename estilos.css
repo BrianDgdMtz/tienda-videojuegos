@@ -9,13 +9,18 @@
 
 body{
     background-image: url(img/Fondo\ de\ pagina\ web.jpg);
-    background-size: 100% 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 .header{
     background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
 }
 
 .divheader{
@@ -72,7 +77,7 @@ body{
 /* SECCION MAIN */
 
 .main{
-    margin-top: 80px;
+    margin-top: 145px;
 }
 
 .slider-main{
@@ -164,3 +169,5 @@ footer .seccion-copyright{
     background: #000;
     padding: 20px 50px;
 }
+
+/* SECCION RESPONSIVE */

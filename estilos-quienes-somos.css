@@ -8,13 +8,18 @@
 
 body{
     background-image: url(img/Fondo\ de\ pagina\ web.jpg);
-    background-size: 100% 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 .header{
     background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
 }
 
 .divheader{
@@ -74,7 +79,7 @@ body{
     flex-direction: column; /* Alinear verticalmente */
     align-items: center; /* Centrar verticalmente */
     justify-content: center; /* Centrar horizontalmente */
-    margin-top: 50px; /* Ajustar la altura del contenedor principal */
+    margin-top: 125px; /* Ajustar la altura del contenedor principal */
 }
 
 .quienes-somos{

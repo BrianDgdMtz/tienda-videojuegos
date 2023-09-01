@@ -8,6 +8,11 @@
 
 .header{
     background-color: #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
 }
 
 .divheader{
@@ -62,6 +67,10 @@
 }
 
 /* SECCION VIDEOJUEGOS */
+.contenedor-slider{
+    margin-top: 125px;
+}
+
 .slider-box{
     width: 1280px;
     height: auto;

@@ -8,13 +8,18 @@
 
 body{
     background-image: url(img/Fondo\ de\ pagina\ web.jpg);
-    background-size: 100% 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 .header{
     background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
 }
 
 .divheader{
@@ -72,6 +77,7 @@ body{
 
 .main{
     background: #fff;
+    margin-top: 170px;
 }
 
 .container-form{
