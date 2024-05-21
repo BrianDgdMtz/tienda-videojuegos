@@ -10,7 +10,7 @@ if(document.readyState == 'loading'){
 
 function ready(){
     
-    //Agregremos funcionalidad a los botones eliminar del carrito
+    //Agregamos funcionalidad a los botones eliminar del carrito
     var botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
     for(var i=0;i<botonesEliminarItem.length; i++){
         var button = botonesEliminarItem[i];
@@ -24,7 +24,7 @@ function ready(){
         button.addEventListener('click',sumarCantidad);
     }
 
-     //Agrego funcionalidad al buton restar cantidad
+     //Agrego funcionalidad al boton restar cantidad
     var botonesRestarCantidad = document.getElementsByClassName('restar-cantidad');
     for(var i=0;i<botonesRestarCantidad.length; i++){
         var button = botonesRestarCantidad[i];
@@ -160,7 +160,7 @@ function eliminarItemCarrito(event){
     //Si no hay elimino el carrito
     ocultarCarrito();
 }
-//Funciòn que controla si hay elementos en el carrito. Si no hay oculto el carrito.
+//Funciòn que controla si hay elementos en el carrito. Si no hay, oculto el carrito.
 function ocultarCarrito(){
     var carritoItems = document.getElementsByClassName('carrito-items')[0];
     if(carritoItems.childElementCount==0){
@@ -193,5 +193,57 @@ function actualizarTotalCarrito(){
     total = Math.round(total * 100)/100;
 
     document.getElementsByClassName('carrito-precio-total')[0].innerText = '$'+total.toLocaleString("es") + ",00";
-
 }
+
+/* Esta seccion se utiliza en la parte del login del sitio para 
+la transicion entre los divs de iniciar sesion y registrarse */
+
+document.getElementById('register-link').addEventListener("click", function (event) {
+    event.preventDefault();
+    let loginDiv = document.getElementById('login-right');
+    let registerDiv = document.getElementById('register-right');
+
+    //Se añade la clase de la animacion
+    loginDiv.classList.add('slide-left');
+
+    // Despues de terminar la animacion se oculta el div de login y se muestra el div de registro
+    loginDiv.addEventListener("animationend", function handleLoginAnimationEnd() {
+        loginDiv.style.display = 'none';
+        registerDiv.style.display = 'block';
+        registerDiv.classList.add('slide-right');
+        loginDiv.classList.remove('slide-left'); // Se limpia la clase de la animacion
+
+        // Se limpia el evento para evitar multiples disparos
+        loginDiv.removeEventListener("animationend", handleLoginAnimationEnd);
+    }, { once:true }); // Se usa once:true para que el evento se dispare solo una vez
+
+    registerDiv.addEventListener("animationend", function handleRegisterAnimationEnd() {
+        registerDiv.classList.remove('slide-right') //Limpiar la clase de la animacion
+        registerDiv.removeEventListener("animationend", handleRegisterAnimationEnd)
+    }, { once:true });
+});
+
+document.getElementById('login-link').addEventListener("click", function (event) {
+    event.preventDefault();
+    let registerDiv = document.getElementById('register-right');
+    let loginDiv = document.getElementById('login-right');
+
+    //Se añade la clase de la animacion
+    registerDiv.classList.add('slide-left-back');
+
+    //Despues de terminar la animacion se oculta el div de registro y se muestra el div de login
+    registerDiv.addEventListener("animationend", function handleRegisterAnimationEnd() {
+        registerDiv.style.display = 'none';
+        loginDiv.style.display = 'block';
+        loginDiv.classList.add('slide-right-back');
+        registerDiv.classList.remove('slide-left-back'); //Se limpia la clase de la animacion
+
+        // Se limpia el evento para evitar multiples disparos
+        registerDiv.removeEventListener("animationend", handleRegisterAnimationEnd);
+    }, { once:true });
+
+    loginDiv.addEventListener("animationend", function handleLoginAnimationEnd() {
+        loginDiv.classList.remove('slide-right-back');
+        loginDiv.removeEventListener("animationend", handleLoginAnimationEnd);
+    }, { once:true });
+});

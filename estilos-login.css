@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+}
+
+body{
+    background-image: url(img/Fondo\ de\ pagina\ web.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header{
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.divheader{
+    max-width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 15px 20px;
+}
+
+.logo{
+    display: inline-block;
+    vertical-align: middle;
+    width: 180px;
+}
+
+.logo img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .navbar a{
+    position: relative;
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+}
+
+/* SECCION LOGIN */
+.main-login{
+    display: flex;
+    flex-direction: column; /* Alinear verticalmente */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    margin-top: 125px; /* Ajustar la altura del contenedor principal */
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-facebook .facebook-column, .login-google .google-column {
+    display: flex;
+    align-items: center; /* Centra verticalmente los items */
+    gap: 15px; /* Espacio entre el icono y el botón */
+    margin: 10px;
+}
+
+.facebook-column-icon, .google-column-icon {
+    flex-shrink: 0; /* Evita que el icono se encoja */
+}
+
+.facebook-column-button, .google-column-button {
+    flex-grow: 1; /* Permite que el botón ocupe el espacio restante */
+}
+
+.facebook-column-button button.facebook, .google-column-button button.google {
+    width: 100%;
+    height: 100%;
+}
+
+.facebook-column a.facebook {
+    text-decoration: none;
+    color: #3b5998;
+    font-size: 2em;
+}
+
+.google-column a.google {
+    text-decoration: none;
+    color: #ea4335;
+    font-size: 2em;
+}
+
+.login {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-left, .login-right {
+    padding: 40px;
+    color: #fff;
+}
+
+.login-left {
+    flex: 1;
+    background: rgba(0, 0, 0, 1);
+}
+
+.login-left h1 {
+    font-size: 3em;
+}
+
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login button {
+    background: #3b5998;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.social-login button:hover {
+    background: #2a3f6d;
+}
+
+.social-login button.google {
+    background: #ea4335;
+}
+
+.social-login button.google:hover {
+    background: #b6362a;
+}
+
+.login-right {
+    flex: 1;
+    background: #fff;
+    color: #000;
+}
+
+.login-right h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.login-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-right label {
+    margin: 10px 0 5px;
+}
+
+.login-right input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-right button {
+    padding: 10px;
+    background: #ffa500;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-right button:hover {
+    background: #e39403;
+}
+
+.login-right p {
+    margin-top: 20px;
+}
+
+.login-right p a {
+    color: #214594;
+    text-decoration: none;
+}
+
+/* Animaciones para el intercambio de animaciones entre
+los div´s de iniciar sesion y registrarse */
+/* Animacion para ocultar el div login-right */
+@keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-450px);
+    }
+}
+
+.slide-left {
+    animation: slide-left 0.6s ease-out;
+}
+
+/*Animacion para mostrar el div register-right*/
+@keyframes slide-right {
+    0% {
+        transform:translateX(-450px)
+    }
+    100% {
+        transform:translateX(0)
+    }
+}
+
+.slide-right {
+    animation:slide-right 0.6s ease-out;
+}
+
+@keyframes slide-left-back {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-450px);
+    }
+}
+
+.slide-left-back {
+    animation: slide-left-back 0.6s ease-out;
+}
+
+@keyframes slide-right-back {
+    0% {
+        transform:translateX(-450px)
+    }
+    100% {
+        transform:translateX(0)
+    }
+}
+
+.slide-right-back {
+    animation:slide-right-back 0.6s ease-out;
+}
+
+/* Estilos para seccion de registro en caso de requerirse que aparezca */
+
+.register-right {
+    display: none;
+    flex: 1;
+    background: #fff;
+    color: #000;
+    padding: 20px 20px;
+}
+
+.register-right h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.register-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-right label {
+    margin: 10px 0 5px;
+}
+
+.register-right input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-right button {
+    padding: 10px;
+    background: #ffa500;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.register-right button:hover {
+    background: #e39403;
+}
+
+.register-right p {
+    margin-top: 20px;
+}
+
+.register-right p a {
+    color: #214594;
+    text-decoration: none;
+}
+
+.register-right .contenedor-password {
+    display: flex;
+    gap: 20px;
+}
+
+.contenedor-password .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* FOOTER */
+footer .redes-sociales {
+    background: #fff;
+    padding: 35px 0;
+    margin-top: 90px;
+}
+
+footer .contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+footer .redes-sociales a {
+    color: #fff;
+    text-align: center;
+    width: 100px;
+    display: block;
+    padding: 15px 0;
+    border-radius: 3px;
+    font-size: 25px;
+    background: #000;
+    margin: 0 20px;
+}
+
+footer .redes-sociales .facebook:hover{
+    background: #1877f2;
+}
+
+footer .redes-sociales .twitter:hover{
+    background: #1da1f2;
+}
+
+footer .redes-sociales .instagram:hover{
+    background: #fcaf45;
+}
+
+footer .redes-sociales .github:hover{
+    background: #4078c0;
+}
+
+footer .redes-sociales .linkedin:hover{
+    background: #0a66c2;
+}
+
+footer .seccion-copyright{
+    font-family: Arial;
+    color: #fff;
+    font-size: 18px;
+    background: #000;
+    padding: 20px 50px;
+}

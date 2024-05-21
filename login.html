@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="app.js" async></script>
+    <link rel="stylesheet" href="estilos-login.css">
+    <title>GameWorld</title>
+</head>
+<body>
+    <!-- HEADER NAVBAR -->
+    <header class="header">
+        <div class="divheader">
+            <a href="#" class="logo">
+                <img src="img/logo tienda online.png" alt="">
+            </a>
+    
+            <nav class="navbar">
+                <a href="index.html" id="btn-inicio">Home</a>
+                <a href="quienes-somos.html" id="btn-quienes-somos">Quienes somos</a>
+                <a href="videojuegos.html" id="btn-videojuegos">Videojuegos</a>
+                <a href="contacto.html" id="btn-contacto">Contactanos</a>
+                <a href="" id="btn-contacto">Iniciar sesion</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="main-login">
+        <div class="login">
+            <div class="login-left">
+                <h1>¡Hola Gamer!</h1>
+                <p>Nos complace tenerte de vuelta como miembro de esta bonita comunidad, ingresa con tu perfil para acceder a tu cuenta. ¡Keep Gaming!</p>
+                <br>
+                <p>Tambien puedes ingresar con tu cuenta de Facebook ó Google</p>
+                <div class="social-login">
+                    <div class="login-facebook">
+                        <div class="facebook-column">
+                            <div class="facebook-column-icon">
+                                <a class="facebook"><i class="fa-brands fa-facebook"></i></a>
+                            </div>
+                            <div class="facebook-column-button">
+                                <button class="facebook">Ingresa con Facebook</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login-google">
+                        <div class="google-column">
+                            <div class="google-column-icon">
+                                <a class="google"><i class="fa-brands fa-google"></i></a>
+                            </div>
+                            <div class="google-column-button">
+                                <button class="google">Ingresa con Google</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="login-right" class="login-right">
+                <h2>Login</h2>
+                <form>
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" name="username">
+                    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+                <p>¿No tienes cuenta? <a href="#" id="register-link">Regístrate</a></p>
+            </div>
+            
+            
+            <div id="register-right" class="register-right">
+                <h2>Registrarse</h2>
+                <form>
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" name="username">
+                    
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email">
+        
+                    <div class="contenedor-password">
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <div class="input-group">
+                            <label for="confirm-password">Confirmar password</label>
+                            <input type="password" id="confirm-password" name="confirm-password">
+                        </div>
+                    </div>
+                    <button type="submit">Registrarse</button>
+                </form>
+                <p>¿Ya tienes una cuenta? <a href="#" id="login-link">Inicia sesión</a></p>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <section class="redes-sociales">
+            <div class="contenedor">
+                <a href="#" class="facebook" title="Sigueme en Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="twitter" title="Sigueme en Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="instagram" title="Sigueme en Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="github" title="Visita mi GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="linkedin" title="Visita mi linkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </section>
+        <section class="seccion-copyright">
+            <span class="copyright">© 2023 GameWorld. Todos los derechos reservados. | <br> GameWorld S.A. de C.V. Veracruz, Mexico.</span>
+        </section>
+    </footer>
+</body>
+</html>

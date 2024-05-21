@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+}
+
+.main-login{
+    display: flex;
+    flex-direction: column; /* Alinear verticalmente */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    margin-top: 125px; /* Ajustar la altura del contenedor principal */
+}
+
+.register-right {
+    flex: 1;
+    background: #fff;
+    color: #000;
+}
+
+.register-right h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.register-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-right label {
+    margin: 10px 0 5px;
+}
+
+.register-right input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-right button {
+    padding: 10px;
+    background: #ffa500;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.register-right button:hover {
+    background: #e39403;
+}
+
+.register-right p {
+    margin-top: 20px;
+}
+
+.register-right p a {
+    color: #214594;
+    text-decoration: none;
+}
