@@ -1,4 +1,4 @@
-export const products = [
+const rawProducts = [
   {
     id: '1',
     title: 'Zelda: Tears of The Kingdom',
@@ -123,8 +123,15 @@ export const products = [
     ]
   }
 ];
+];
 
-export const heroSlides = [
+export const products = rawProducts.map(p => ({
+  ...p,
+  image: import.meta.env.BASE_URL + (p.image.startsWith('/') ? p.image.slice(1) : p.image),
+  screenshots: p.screenshots ? p.screenshots.map(s => import.meta.env.BASE_URL + (s.startsWith('/') ? s.slice(1) : s)) : []
+}));
+
+const rawHeroSlides = [
   '/img/slider-main/AC-Mirage.png',
   '/img/slider-main/starfield.jpg',
   '/img/slider-main/zelda-tears.jpg',
@@ -134,3 +141,5 @@ export const heroSlides = [
   '/img/slider-main/POP-thelostcrown.jpeg',
   '/img/slider-main/hogwarts-legacy.jpg'
 ];
+
+export const heroSlides = rawHeroSlides.map(s => import.meta.env.BASE_URL + (s.startsWith('/') ? s.slice(1) : s));
