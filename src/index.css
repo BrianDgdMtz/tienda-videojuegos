@@ -11,7 +11,7 @@
   --secondary-accent: #4facfe;
   
   /* Utilities */
-  --glass-bg: rgba(22, 28, 45, 0.7);
+  --glass-bg: rgba(22, 28, 45, 0.4);
   --glass-border: rgba(255, 255, 255, 0.1);
   --transition: all 0.3s ease;
 }
