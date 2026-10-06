@@ -123,8 +123,6 @@ const rawProducts = [
     ]
   }
 ];
-];
-
 export const products = rawProducts.map(p => ({
   ...p,
   image: import.meta.env.BASE_URL + (p.image.startsWith('/') ? p.image.slice(1) : p.image),
